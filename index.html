@@ -8,29 +8,39 @@
 </head>
 <body>
   <div class="calculator">
-    <input type="text" name="" class="display-output" id="display" readonly>
+    <input type="text" class="display-output" id="display" readonly value="0">
     <div class="button-container">
-      <button class="button-click" id="clear-button" style="background-color: #959494; border: none;" onclick="outputBox='0'; document.querySelector('#display').value=outputBox;">C</button>
-      <button class="button-click" style="background-color: #959494; border: none;" onclick="toggleSwitch()">+/-</button>
-      <button class="button-click" style="background-color: #959494; border: none;" onclick="percentage()">%</button>
+      <!-- Clear and Special Buttons -->
+      <button class="button-click" id="clear-button" style="background-color: #959494;">AC</button>
+      <button class="button-click" style="background-color: #959494;" onclick="toggleSwitch()">+/-</button>
+      <button class="button-click" style="background-color: #959494;" onclick="percentage()">%</button>
       <button class="button-click" onclick="division()">÷</button>
-      <button class="button-click" style="background-color: #615f5f; border: none;" onclick="handleNumberInput('7'); document.querySelector('#display').value=outputBox; clearIfNeeded();">7</button>
-      <button class="button-click" style="background-color: #615f5f; border: none;" onclick="handleNumberInput('8'); document.querySelector('#display').value=outputBox; clearIfNeeded();">8</button>
-      <button class="button-click" style="background-color: #615f5f; border: none;" onclick="handleNumberInput('9'); document.querySelector('#display').value=outputBox; clearIfNeeded();">9</button>
+
+      <!-- Number Buttons (7-9) -->
+      <button class="button-click" style="background-color: #615f5f;" onclick="handleNumberInput('7')">7</button>
+      <button class="button-click" style="background-color: #615f5f;" onclick="handleNumberInput('8')">8</button>
+      <button class="button-click" style="background-color: #615f5f;" onclick="handleNumberInput('9')">9</button>
       <button class="button-click" onclick="multiplication()">x</button>
-      <button class="button-click" style="background-color: #615f5f; border: none;" onclick="handleNumberInput('4'); document.querySelector('#display').value=outputBox; clearIfNeeded();">4</button>
-      <button class="button-click" style="background-color: #615f5f; border: none;" onclick="handleNumberInput('5'); document.querySelector('#display').value=outputBox; clearIfNeeded();">5</button>
-      <button class="button-click" style="background-color: #615f5f; border: none;" onclick="handleNumberInput('6'); document.querySelector('#display').value=outputBox; clearIfNeeded();">6</button>
-      <button class="button-click" onclick="subtraction()">-</button> 
-      <button class="button-click" style="background-color: #615f5f; border: none;" onclick="handleNumberInput('1'); document.querySelector('#display').value=outputBox; clearIfNeeded();">1</button> 
-      <button class="button-click" style="background-color: #615f5f; border: none;" onclick="handleNumberInput('2'); document.querySelector('#display').value=outputBox; clearIfNeeded();">2</button> 
-      <button class="button-click" style="background-color: #615f5f; border: none;" onclick="handleNumberInput('3'); document.querySelector('#display').value=outputBox; clearIfNeeded();">3</button> 
-      <button class="button-click" onclick="addition()">+</button> 
-      <button class="button-click" style="background-color: #615f5f; border: none;" onclick="outputBox=outputBox+'0'; document.querySelector('#display').value=outputBox; clearIfNeeded();">0</button> 
-      <button class="button-click" style="background-color: #615f5f; border: none;" onclick="point()">.</button> 
-      <button class="button-click-change" onclick="solve()">=</button> 
+
+      <!-- Number Buttons (4-6) -->
+      <button class="button-click" style="background-color: #615f5f;" onclick="handleNumberInput('4')">4</button>
+      <button class="button-click" style="background-color: #615f5f;" onclick="handleNumberInput('5')">5</button>
+      <button class="button-click" style="background-color: #615f5f;" onclick="handleNumberInput('6')">6</button>
+      <button class="button-click" onclick="subtraction()">-</button>
+
+      <!-- Number Buttons (1-3) -->
+      <button class="button-click" style="background-color: #615f5f;" onclick="handleNumberInput('1')">1</button>
+      <button class="button-click" style="background-color: #615f5f;" onclick="handleNumberInput('2')">2</button>
+      <button class="button-click" style="background-color: #615f5f;" onclick="handleNumberInput('3')">3</button>
+      <button class="button-click" onclick="addition()">+</button>
+
+      <!-- Number Button (0), Decimal Point, and Equals -->
+      <button class="button-click" style="background-color: #615f5f;" onclick="handleNumberInput('0')">0</button>
+      <button class="button-click" style="background-color: #615f5f;" onclick="point()">.</button>
+      <button class="button-click-change" onclick="solve()">=</button>
     </div>
   </div>
+
   <script src="./javascripts/app.js"></script>
 </body>
 </html>

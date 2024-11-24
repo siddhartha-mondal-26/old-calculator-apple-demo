@@ -98,16 +98,17 @@ const clearButton = document.querySelector('#clear-button');
 clearButton.addEventListener('mousedown', () => {
   clearTimeoutRef = setTimeout(() => {
     allClear();
-    clearButton.innerHTML = '⌫'; 
+    clearButton.innerHTML = 'AC';
     clearTimeoutRef = null;
   }, 2000);
-  clearButton.innerHTML = 'AC';
+  clearButton.innerHTML = '⌫';
 });
 
 clearButton.addEventListener('mouseup', () => {
   if (clearTimeoutRef) {
-    clearTimeout(clearTimeoutRef); 
-    backSpace(); 
+    clearTimeout(clearTimeoutRef);
+    clearTimeoutRef = null;
+    backSpace();
   }
   clearButton.innerHTML = '⌫';
 });
